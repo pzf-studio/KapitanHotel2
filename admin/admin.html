@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель | У Капитана</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Боковое меню -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../images/Loggo2.png" alt="Логотип" class="admin-logo">
+                <h2>Админ-панель</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-section="dashboard"><i class="fas fa-tachometer-alt"></i> Панель управления</li>
+                    <li data-section="gallery"><i class="fas fa-images"></i> Галерея</li>
+                    <li data-section="promotions"><i class="fas fa-percentage"></i> Акции</li>
+                    <li data-section="prices"><i class="fas fa-tags"></i> Цены</li>
+                    <li data-section="rooms"><i class="fas fa-bed"></i> Номера</li>
+                    <li data-section="settings"><i class="fas fa-cog"></i> Настройки</li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Выйти</a>
+            </div>
+        </aside>
+
+        <!-- Основное содержимое -->
+        <main class="admin-content">
+            <header class="admin-header">
+                <h1 id="content-title">Панель управления</h1>
+                <div class="admin-actions">
+                    <button class="btn-save"><i class="fas fa-save"></i> Сохранить</button>
+                </div>
+            </header>
+
+            <!-- Разделы контента -->
+            <section id="dashboard-section" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Посетители сегодня</h3>
+                        <p class="stat-value">124</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Бронирования</h3>
+                        <p class="stat-value">8</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Доход</h3>
+                        <p class="stat-value">24,500₽</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gallery-section" class="content-section">
+                <h2>Управление галереей</h2>
+                <div class="gallery-manager">
+                    <div class="gallery-upload">
+                        <h3>Добавить фото</h3>
+                        <form id="uploadForm" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Выберите отель</label>
+                                <select id="gallery-hotel" class="form-control">
+                                    <option value="bulvar">Нагорный бульвар</option>
+                                    <option value="sevastopol">Севастопольский проспект</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Выберите изображения</label>
+                                <input type="file" id="gallery-images" multiple accept="image/*">
+                            </div>
+                            <button type="button" class="btn-upload">Загрузить</button>
+                        </form>
+                    </div>
+                    <div class="gallery-list">
+                        <h3>Текущие фото</h3>
+                        <div class="hotel-tabs">
+                            <button class="hotel-tab active" data-hotel="bulvar">Нагорный бульвар</button>
+                            <button class="hotel-tab" data-hotel="sevastopol">Севастопольский</button>
+                        </div>
+                        <div class="images-grid" id="bulvar-images">
+                            <!-- Фото будут загружены через JS -->
+                        </div>
+                        <div class="images-grid" id="sevastopol-images" style="display: none;">
+                            <!-- Фото будут загружены через JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="promotions-section" class="content-section">
+                <h2>Управление акциями</h2>
+                <button class="btn-add-promotion"><i class="fas fa-plus"></i> Добавить акцию</button>
+                <div class="promotions-list" id="promotions-list">
+                    <!-- Акции будут загружены через JS -->
+                </div>
+            </section>
+
+            <section id="prices-section" class="content-section">
+                <h2>Управление ценами</h2>
+                <div class="price-tables">
+                    <div class="price-table">
+                        <h3>Нагорный бульвар</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Тип номера</th>
+                                    <th>Час</th>
+                                    <th>Ночь</th>
+                                    <th>Сутки</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Стандарт</td>
+                                    <td><input type="number" value="1500" class="price-input"></td>
+                                    <td><input type="number" value="2200" class="price-input"></td>
+                                    <td><input type="number" value="3500" class="price-input"></td>
+                                </tr>
+                                <tr>
+                                    <td>Комфорт</td>
+                                    <td><input type="number" value="1800" class="price-input"></td>
+                                    <td><input type="number" value="3500" class="price-input"></td>
+                                    <td><input type="number" value="4500" class="price-input"></td>
+                                </tr>
+                                <tr>
+                                    <td>Полулюкс</td>
+                                    <td><input type="number" value="2000" class="price-input"></td>
+                                    <td><input type="number" value="4500" class="price-input"></td>
+                                    <td><input type="number" value="6000" class="price-input"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="price-table">
+                        <h3>Севастопольский проспект</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Тип номера</th>
+                                    <th>Час</th>
+                                    <th>Ночь</th>
+                                    <th>Сутки</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Стандарт</td>
+                                    <td><input type="number" value="1500" class="price-input"></td>
+                                    <td><input type="number" value="2200" class="price-input"></td>
+                                    <td><input type="number" value="3500" class="price-input"></td>
+                                </tr>
+                                <tr>
+                                    <td>Полулюкс</td>
+                                    <td><input type="number" value="1800" class="price-input"></td>
+                                    <td><input type="number" value="4000" class="price-input"></td>
+                                    <td><input type="number" value="5000" class="price-input"></td>
+                                </tr>
+                                <tr>
+                                    <td>Люкс</td>
+                                    <td><input type="number" value="2000" class="price-input"></td>
+                                    <td><input type="number" value="4500" class="price-input"></td>
+                                    <td><input type="number" value="6500" class="price-input"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <button class="btn-save-prices">Сохранить цены</button>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

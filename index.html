@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини отель "У Капитана" | Москва</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/Loggo2.png" alt="Мини отель У Капитана" class="logo-img">
+                <div class="logo-text">
+                    <span>Мини отель</span>
+                    <span>У Капитана</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <div class="nav-links">
+                    <a href="#advantages">Преимущества</a>
+                    <a href="#hotels">Номера</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <a href="#booking" class="btn">Забронировать</a>
+                <div class="nav-indicator"></div>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="slides-container">
+            <div class="slide active" style="background-image: url('images/hero-bg1.JPG');"></div>
+            <div class="slide" style="background-image: url('images/hero-bg2.JPG');"></div>
+            <div class="slide" style="background-image: url('images/hero-bg3.JPG');"></div>
+            <div class="slide" style="background-image: url('images/hero-bg4.JPG');"></div>
+        </div>
+        
+        <canvas id="particle-canvas"></canvas>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="text-reveal">Мини отель "У Капитана"</span>
+                    <span class="text-reveal subtitle">Уют и комфорт в Москве</span>
+                </h1>
+                <p class="hero-subtitle">От <span class="price pulse">2200₽</span> за ночь · Бесплатный Wi-Fi · 5 минут до метро</p>
+                <div class="cta-buttons">
+                    <a href="#booking" class="btn btn-hero">
+                        <span>Забронировать номер</span>
+                        <i class="fas fa-calendar-check"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pagination-dots"></div>
+    </section>
+
+    <section id="hotels" class="section">
+        <div class="container">
+            <h2 class="section-title">Наши отели</h2>
+            
+            <div class="hotel-card">
+                <div class="hotel-header">
+                    <h3>Мини отель "У Капитана" на Нагорном бульваре</h3>
+                    <div class="hotel-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        г. Москва, Нагорный бульвар, д. 19, корпус 1
+                    </div>
+                </div>
+                
+                <div class="rooms-grid">
+                    <div class="room-card standard">
+                        <div class="room-image" style="background-image: url('images/standard-room.JPG');">
+                            <div class="price-tag">от 2 200₽/ночь</div>
+                        </div>
+                        <div class="room-info">
+                            <h4>Стандарт</h4>
+                            <p>Уютный номер с двумя односпальными кроватями (можно сдвинуть)</p>
+                            <ul>
+                                <li><i class="fas fa-user-friends"></i> 2 человека</li>
+                                <li><i class="fas fa-ruler-combined"></i> 18 м²</li>
+                                <li><i class="fas fa-wifi"></i> Бесплатный Wi-Fi</li>
+                                <li><i class="fas fa-tv"></i> Телевизор</li>
+                            </ul>
+                            <a href="standart.html" class="btn-outline">Осмотреть</a>
+                        </div>
+                    </div>
+                    
+                    <div class="room-card comfort">
+                        <div class="room-image" style="background-image: url('images/comfort-room.JPG');">
+                            <div class="price-tag">от 3 500₽/ночь</div>
+                        </div>
+                        <div class="room-info">
+                            <h4>Комфорт</h4>
+                            <p>Номер с двуспальной кроватью и дополнительным спальным местом</p>
+                            <ul>
+                                <li><i class="fas fa-user-friends"></i> 2+1 человек</li>
+                                <li><i class="fas fa-ruler-combined"></i> 22 м²</li>
+                                <li><i class="fas fa-key"></i> Сейф</li>
+                                <li><i class="fas fa-couch"></i> Дополнительное место</li>
+                            </ul>
+                            <a href="comfort.html" class="btn-outline">Осмотреть</a>
+                        </div>
+                    </div>
+                    
+                    <div class="room-card junior-suite">
+                        <div class="room-image" style="background-image: url('images/junior-suite.JPG');">
+                            <div class="price-tag">от 4 500₽/ночь</div>
+                        </div>
+                        <div class="room-info">
+                            <h4>Полулюкс</h4>
+                            <p>Просторный номер с двуспальной кроватью и зоной отдыха</p>
+                            <ul>
+                                <li><i class="fas fa-user-friends"></i> 2+1 человек</li>
+                                <li><i class="fas fa-ruler-combined"></i> 30 м²</li>
+                                <li><i class="fas fa-key"></i> Сейф</li>
+                                <li><i class="fas fa-umbrella-beach"></i> Халаты и тапочки</li>
+                            </ul>
+                            <a href="junior.html" class="btn-outline">Осмотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hotel-card">
+                <div class="hotel-header">
+                    <h3>Мини отель "У Капитана" на Севастопольском проспекте</h3>
+                    <div class="hotel-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        г. Москва, Севастопольский пр-т, д. 28, корпус 8
+                    </div>
+                </div>
+                
+                <div class="rooms-grid">
+                    <div class="room-card standard">
+                        <div class="room-image" style="background-image: url('images/standard-room2.JPG');">
+                            <div class="price-tag">от 2 200₽/ночь</div>
+                        </div>
+                        <div class="room-info">
+                            <h4>Стандарт</h4>
+                            <p>Комфортабельный номер с двумя односпальными кроватями</p>
+                            <ul>
+                                <li><i class="fas fa-user-friends"></i> 2 человека</li>
+                                <li><i class="fas fa-ruler-combined"></i> 20 м²</li>
+                                <li><i class="fas fa-snowflake"></i> Кондиционер</li>
+                                <li><i class="fas fa-shower"></i> Современный санузел</li>
+                            </ul>
+                            <a href="standart.html" class="btn-outline">Осмотреть</a>
+                        </div>
+                    </div>
+                    
+                    <div class="room-card junior-suite">
+                        <div class="room-image" style="background-image: url('images/junior-suite2.JPG');">
+                            <div class="price-tag">от 4 000₽/ночь</div>
+                        </div>
+                        <div class="room-info">
+                            <h4>Полулюкс</h4>
+                            <p>Просторный номер с двуспальной кроватью и сейфом</p>
+                            <ul>
+                                <li><i class="fas fa-user-friends"></i> 2 человека</li>
+                                <li><i class="fas fa-ruler-combined"></i> 35 м²</li>
+                                <li><i class="fas fa-key"></i> Сейф</li>
+                                <li><i class="fas fa-coffee"></i> Чайная станция</li>
+                            </ul>
+                            <a href="junior.html" class="btn-outline">Осмотреть</a>
+                        </div>
+                    </div>
+                    
+                    <div class="room-card suite">
+                        <div class="room-image" style="background-image: url('images/suite-room2.JPG');">
+                            <div class="price-tag">от 6 000₽/ночь</div>
+                        </div>
+                        <div class="room-info">
+                            <h4>Люкс</h4>
+                            <p>Двухкомнатный номер с гостиной зоной и угловым диваном</p>
+                            <ul>
+                                <li><i class="fas fa-user-friends"></i> 2+2 человека</li>
+                                <li><i class="fas fa-ruler-combined"></i> 50 м²</li>
+                                <li><i class="fas fa-couch"></i> Угловой диван</li>
+                                <li><i class="fas fa-concierge-bell"></i> Персональный сервис</li>
+                            </ul>
+                            <a href="suite.html" class="btn-outline">Осмотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Фотогалерея</h2>
+            
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-hotel="bulvar">"У Капитана" на Нагорном бульваре</button>
+                <button class="gallery-tab" data-hotel="sevastopol">"У Капитана" на Севастопольском проспекте</button>
+            </div>
+            
+            <div class="gallery-content">
+                <div class="main-gallery">
+                    <div class="main-slide">
+                        <img src="" alt="Фото мини отеля" class="main-image active">
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="gallery-counter">
+                            <span class="current-slide">1</span> / <span class="total-slides">6</span>
+                        </div>
+                        <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="thumbnails-container">
+                    <div class="thumbnails-grid" data-hotel="bulvar">
+                        <!-- Миниатюры будут добавлены через JS -->
+                    </div>
+                    <div class="thumbnails-grid" data-hotel="sevastopol" style="display: none;">
+                        <!-- Миниатюры будут добавлены через JS -->
+                    </div>
+                </div>
+                
+                <div class="hotel-description">
+                    <h3 class="hotel-name">"У Капитана" на Нагорном бульваре</h3>
+                    <div class="hotel-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Москва, Нагорный бульвар, д. 19, корпус 1</span>
+                    </div>
+                    <p class="hotel-text">Новый мини отель в тихом зеленом районе в 5 минутах от метро Нагорная. Современные номера с ремонтом, кондиционерами и всем необходимым для комфортного отдыха.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="section">
+        <div class="container">
+            <h2 class="section-title">Бронирование номеров</h2>
+            
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <div class="booking-steps">
+                        <div class="step-indicator active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Выбор отеля</div>
+                        </div>
+                        <div class="step-indicator" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Тип бронирования</div>
+                        </div>
+                        <div class="step-indicator" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Даты</div>
+                        </div>
+                        <div class="step-indicator" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Подтверждение</div>
+                        </div>
+                        <div class="step-line"></div>
+                    </div>
+                    
+                    <form id="booking-form">
+                        <div class="booking-step active" data-step="1">
+                            <h3 class="step-heading">Выберите отель</h3>
+                            <div class="hotel-selection">
+                                <div class="hotel-option selected" data-hotel="bulvar">
+                                    <div class="hotel-image" style="background-image: url('images/hotel1/1.JPG');"></div>
+                                    <div class="hotel-info">
+                                        <h4>"У Капитана" на Нагорном бульваре</h4>
+                                        <div class="hotel-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> 5 мин до метро</span>
+                                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                                        </div>
+                                        <div class="price-range">от 1 500₽/час</div>
+                                    </div>
+                                    <div class="selection-badge">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="hotel-option" data-hotel="sevastopol">
+                                    <div class="hotel-image" style="background-image: url('images/hotel2/1.JPG');"></div>
+                                    <div class="hotel-info">
+                                        <h4>"У Капитана" на Севастопольском</h4>
+                                        <div class="hotel-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> 7 мин до метро</span>
+                                            <span><i class="fas fa-star"></i> 4.7/5</span>
+                                        </div>
+                                        <div class="price-range">от 1 500₽/час</div>
+                                    </div>
+                                    <div class="selection-badge">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-step" data-step="2">
+                            <h3 class="step-heading">Выберите тип бронирования</h3>
+                            
+                            <div class="booking-type-selection">
+                                <h4>Тип проживания</h4>
+                                <div class="booking-type-options">
+                                    <div class="booking-type-option" data-type="hourly">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Почасовое</span>
+                                    </div>
+                                    <div class="booking-type-option" data-type="night">
+                                        <i class="fas fa-moon"></i>
+                                        <span>Ночь</span>
+                                    </div>
+                                    <div class="booking-type-option" data-type="daily">
+                                        <i class="fas fa-calendar-day"></i>
+                                        <span>Сутки</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="hours-selection" style="display: none;">
+                                <h4>Выберите количество часов</h4>
+                                <div class="hours-options">
+                                    <div class="hours-option" data-hours="1">1 час</div>
+                                    <div class="hours-option" data-hours="2">2 часа</div>
+                                    <div class="hours-option" data-hours="3">3 часа</div>
+                                </div>
+                            </div>
+                            
+                            <div class="room-selection">
+                                <h4>Выберите тип номера</h4>
+                                <div class="room-options">
+                                    <div class="room-option" data-room="standard">
+                                        <div class="room-type">Стандарт (STD)</div>
+                                        <div class="room-price" data-hourly="1500" data-night="2200" data-daily="3500">1 500₽/час</div>
+                                    </div>
+                                    <div class="room-option" data-room="delux">
+                                        <div class="room-type">Комфорт (Comfort)</div>
+                                        <div class="room-price" data-hourly="1800" data-night="3500" data-daily="4500">1 800₽/час</div>
+                                    </div>
+                                    <div class="room-option" data-room="suite">
+                                        <div class="room-type">Люкс (Suite)</div>
+                                        <div class="room-price" data-hourly="2000" data-night="4500" data-daily="6000">2 000₽/час</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="extra-options">
+                                <h4>Дополнительные опции</h4>
+                                <div class="form-group">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" id="third-person">
+                                        <span class="checkmark"></span>
+                                        Третий человек (+1000₽)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-step" data-step="3">
+                            <h3 class="step-heading">Выберите даты бронирования</h3>
+                            
+                            <div class="date-selection">
+                                <div class="date-input">
+                                    <label for="checkin-date">Дата заезда</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="checkin-date" class="form-input datepicker" readonly>
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="date-input">
+                                    <label for="checkout-date">Дата выезда</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="checkout-date" class="form-input datepicker" readonly>
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-clear-dates">Очистить даты</button>
+                            </div>
+                            
+                            <div class="calendar-container">
+                                <div class="calendar-header">
+                                    <button type="button" class="calendar-nav prev-month">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <h4 class="calendar-month">Май 2025</h4>
+                                    <button type="button" class="calendar-nav next-month">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                                <div class="calendar-grid">
+                                    <div class="calendar-weekday">Пн</div>
+                                    <div class="calendar-weekday">Вт</div>
+                                    <div class="calendar-weekday">Ср</div>
+                                    <div class="calendar-weekday">Чт</div>
+                                    <div class="calendar-weekday">Пт</div>
+                                    <div class="calendar-weekday">Сб</div>
+                                    <div class="calendar-weekday">Вс</div>
+                                </div>
+                            </div>
+                            
+                            <div class="time-selection" id="hourly-time-selection" style="display: none;">
+                                <h4>Выберите время заезда</h4>
+                                <div class="time-options">
+                                    <select id="checkin-hour" class="form-input">
+                                        <option value="10">10:00</option>
+                                        <option value="11">11:00</option>
+                                        <option value="12">12:00</option>
+                                        <option value="13">13:00</option>
+                                        <option value="14">14:00</option>
+                                        <option value="15">15:00</option>
+                                        <option value="16">16:00</option>
+                                        <option value="17">17:00</option>
+                                        <option value="18">18:00</option>
+                                        <option value="19">19:00</option>
+                                        <option value="20">20:00</option>
+                                        <option value="21">21:00</option>
+                                        <option value="22">22:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="booking-step" data-step="4">
+                            <h3 class="step-heading">Подтверждение бронирования</h3>
+                            <div class="booking-summary">
+                                <div class="summary-card">
+                                    <div class="summary-image" style="background-image: url('images/hotel1/1.JPG');"></div>
+                                    <div class="summary-details">
+                                        <h4 id="summary-hotel">"У Капитана" на Нагорном бульваре</h4>
+                                        <div class="summary-info">
+                                            <div class="info-item">
+                                                <i class="fas fa-bed"></i>
+                                                <span id="summary-room">Стандарт</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <i class="fas fa-clock"></i>
+                                                <span id="summary-period">1 час</span>
+                                            </div>
+                                            <div class="info-item" id="summary-third-person" style="display: none;">
+                                                <i class="fas fa-user-plus"></i>
+                                                <span>Третий человек</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="price-summary">
+                                    <div class="price-item base-price">
+                                        <span id="price-description">1 час × 1 500₽</span>
+                                        <span id="base-price">1 500₽</span>
+                                    </div>
+                                    <div class="price-item extra-price" id="third-person-price" style="display: none;">
+                                        <span>Третий человек</span>
+                                        <span>+1 000₽</span>
+                                    </div>
+                                    <div class="price-item total">
+                                        <span>Итого</span>
+                                        <span id="summary-total">1 500₽</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="guest-info">
+                                    <h4>Контактная информация</h4>
+                                    <div class="form-group">
+                                        <label for="guest-name">Ваше имя</label>
+                                        <input type="text" id="guest-name" class="form-input" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="guest-phone">Телефон</label>
+                                        <input type="tel" id="guest-phone" class="form-input" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="guest-email">Email</label>
+                                        <input type="email" id="guest-email" class="form-input" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-controls">
+                            <button type="button" class="btn btn-prev" disabled>
+                                <i class="fas fa-arrow-left"></i> Назад
+                            </button>
+                            <button type="button" class="btn btn-next">
+                                Далее <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button type="submit" class="btn btn-submit">
+                                Подтвердить бронирование
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="booking-benefits">
+                    <div class="benefits-card">
+                        <h3>Почему стоит выбрать нас?</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <strong>Гибкие тарифы</strong>
+                                    <span>Почасовая оплата, ночь или полные сутки</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <strong>Домашняя атмосфера</strong>
+                                    <span>Уютные номера с современным ремонтом</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <strong>Удобное расположение</strong>
+                                    <span>5-7 минут пешком от метро в зеленых районах</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="special-offer">
+                        <div class="offer-badge">Правила</div>
+                        <h4>Условия бронирования</h4>
+                        <p>При бронировании от 4 часов - оплата по тарифу суток</p>
+                        <div class="offer-timer">
+                            <div class="timer-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="timer-text">
+                                <span>Круглосуточная работа</span>
+                                <strong>Без выходных</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promotions" class="section">
+        <div class="container">
+            <h2 class="section-title">Специальные предложения</h2>
+            
+            
+            <div class="promotions-grid">
+                <!-- Акция 1 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Акция</div>
+                    <div class="promotion-image" style="background-image: url('images/promotion1.jpg');">
+                        <div class="promotion-overlay">
+                            <div class="promotion-content">
+                                <h3>Долгосрочное проживание</h3>
+                                <p>Скидка 15% при бронировании от 7 дней</p>
+                                <div class="promotion-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> до 31.12.2025</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Оба отеля</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promotion-details">
+                        <p>Забронируйте номер на 7 и более дней и получите скидку 15% на весь период проживания.</p>
+                        <a href="#booking" class="btn-outline">Забронировать</a>
+                    </div>
+                </div>
+                
+                <!-- Акция 2 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Хит</div>
+                    <div class="promotion-image" style="background-image: url('images/promotion2.jpg');">
+                        <div class="promotion-overlay">
+                            <div class="promotion-content">
+                                <h3>Раннее бронирование</h3>
+                                <p>Скидка 10% при бронировании за 30 дней</p>
+                                <div class="promotion-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> круглый год</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Оба отеля</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promotion-details">
+                        <p>Забронируйте номер минимум за 30 дней до заезда и получите скидку 10%.</p>
+                        <a href="#booking" class="btn-outline">Забронировать</a>
+                    </div>
+                </div>
+                
+                <!-- Акция 3 -->
+                <div class="promotion-card">
+                    <div class="promotion-badge">Новинка</div>
+                    <div class="promotion-image" style="background-image: url('images/promotion3.jpg');">
+                        <div class="promotion-overlay">
+                            <div class="promotion-content">
+                                <h3>Выходные со скидкой</h3>
+                                <p>Специальные цены на пятницу и субботу</p>
+                                <div class="promotion-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> до 31.12.2025</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Нагорный бульвар</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promotion-details">
+                        <p>Специальные цены на проживание в выходные дни (пятница и суббота).</p>
+                        <a href="#booking" class="btn-outline">Забронировать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages" class="section">
+        <div class="container">
+            <h2 class="section-title">Наши преимущества</h2>
+            <p class="section-subtitle">Почему гости выбирают мини отель "У Капитана"</p>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Удачное расположение</h3>
+                    <p>Тихие зеленые районы в 5-7 минутах от метро Нагорная и Севастопольская</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Почасовая оплата</h3>
+                    <p>Удобно для тех, кому нужно отдохнуть несколько часов между делами</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Домашняя атмосфера</h3>
+                    <p>Уютные номера с современным ремонтом создают ощущение домашнего комфорта</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Бесплатный Wi-Fi</h3>
+                    <p>Высокоскоростной интернет на всей территории отеля</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3>Парковка</h3>
+                    <p>Удобная парковка для гостей, прибывающих на автомобиле</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>Круглосуточная стойка</h3>
+                    <p>Наш персонал всегда готов помочь вам в любое время суток</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="section">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <h3>Свяжитесь с нами</h3>
+                        <div class="contact-card-tabs">
+                            <button class="contact-tab active" data-tab="bulvar">Нагорный бульвар</button>
+                            <button class="contact-tab" data-tab="sevastopol">Севастопольский</button>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card-body">
+                        <div class="contact-info active" data-tab="bulvar">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Адрес</h4>
+                                    <a href="https://yandex.ru/maps/?text=г. Москва, Нагорный бульвар, д. 19, корпус 1" target="_blank">
+                                        г. Москва, Нагорный бульвар, д. 19, корпус 1
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-subway"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Метро</h4>
+                                    <p>Нагорная (5 минут пешком)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Телефон</h4>
+                                    <a href="tel:+74992262016">+7 (499) 226-20-16</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Режим работы</h4>
+                                    <p>Круглосуточно</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info" data-tab="sevastopol">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Адрес</h4>
+                                    <a href="https://yandex.ru/maps/?text=г. Москва, Севастопольский пр-т, д. 28, корпус 8" target="_blank">
+                                        г. Москва, Севастопольский пр-т, д. 28, корпус 8
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-subway"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Метро</h4>
+                                    <p>Севастопольская (7 минут пешком)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Телефон</h4>
+                                    <a href="tel:+74992262016">+7 (499) 226-20-16</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Режим работы</h4>
+                                    <p>Круглосуточно</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card-footer">
+                        <h4>Мы в соцсетях</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="social-link tg"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-link inst"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-map-container">
+                    <div id="yandex-map" class="interactive-map"></div>
+                    <div class="map-controls">
+                        <button class="map-control-btn" data-hotel="bulvar">
+                            <i class="fas fa-map-marker-alt"></i> Нагорный бульвар
+                        </button>
+                        <button class="map-control-btn" data-hotel="sevastopol">
+                            <i class="fas fa-map-marker-alt"></i> Севастопольский
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h3>Остались вопросы? Напишите нам</h3>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="contact-name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="contact-email" placeholder="Ваш email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="contact-subject" placeholder="Тема сообщения">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" placeholder="Ваше сообщение" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">
+                        <i class="fas fa-paper-plane"></i> Отправить сообщение
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="section certificates-section">
+        <div class="container">
+            <h2 class="section-title">Наши сертификаты</h2>
+            <p class="section-subtitle">Подтверждение качества наших услуг</p>
+            
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-preview">
+                        <img src="images/certificate1.jpg" alt="Сертификат соответствия" loading="lazy">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        <h3>Сертификат соответствия</h3>
+                        <p>ГОСТ Р 53423-2009</p>
+                    </div>
+                    <div class="certificate-full">
+                        <img src="images/certificate1.jpg" alt="Полная версия сертификата" loading="lazy">
+                        <button class="close-certificate"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-preview">
+                        <img src="images/certificate2.jpg" alt="Санитарно-эпидемиологическое заключение" loading="lazy">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        <h3>Санитарно-эпидемиологическое заключение</h3>
+                        <p>№ 77.01.12.001.П.000375.01.21</p>
+                    </div>
+                    <div class="certificate-full">
+                        <img src="images/certificate2.jpg" alt="Полная версия сертификата" loading="lazy">
+                        <button class="close-certificate"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">
+                        <img src="images/Loggo2.png" alt="Мини отель У Капитана" class="logo-img">
+                        <div class="logo-text">
+                            <span>Мини отель</span>
+                            <span>У Капитана</span>
+                        </div>
+                    </a>
+                    <p>Небольшие уютные отели в Москве с лучшим соотношением цены и качества. Идеальный выбор для туристов и деловых путешественников.</p>
+                    <div class="footer-social">
+                        <h4>Мы в соцсетях</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Наши отели</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://yandex.ru/maps/?text=г. Москва, Нагорный бульвар, д. 19, корпус 1" target="_blank">
+                                "У Капитана" на Нагорном бульваре
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://yandex.ru/maps/?text=г. Москва, Севастопольский пр-т, д. 28, корпус 8" target="_blank">
+                                "У Капитана" на Севастопольском
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (499) 226-20-16</li>
+                        <li><i class="fas fa-envelope"></i> evropeyskiyhostel@mail.ru</li>
+                        <li><i class="fas fa-clock"></i> Круглосуточная служба бронирования</li>
+                        <li><i class="fas fa-user-tie"></i> Для корпоративных клиентов: +7 (499) 226-20-17</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Полезные ссылки</h4>
+                    <ul>
+                        <li><a href="#advantages">Наши преимущества</a></li>
+                        <li><a href="#rooms">Номера и цены</a></li>
+                        <li><a href="#gallery">Фотогалерея</a></li>
+                        <li><a href="#contacts">Как добраться</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Акции и спецпредложения</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Мини отель "У Капитана". Все права защищены.</p>
+                <div class="legal-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                    <a href="#">Оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU"></script>
+    <script>
+        ymaps.ready(init);
+        
+        function init() {
+            var map = new ymaps.Map('yandex-map', {
+                center: [55.751574, 37.573856],
+                zoom: 11,
+                controls: ['zoomControl']
+            });
+
+            var hostelIcon = new ymaps.Placemark(
+                [0, 0], {}, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'images/Loggo2.png',
+                    iconImageSize: [40, 40],
+                    iconImageOffset: [-20, -20]
+                }
+            );
+
+            var hostels = [
+                {
+                    coords: [55.6716345, 37.5997224],
+                    address: 'г. Москва, Нагорный бульвар, д. 19, корпус 1',
+                    hint: 'Мини отель на Нагорном бульваре'
+                },
+                {
+                    coords: [55.6633108, 37.5744657],
+                    address: 'г. Москва, Севастопольский пр-т, д. 28, корпус 8',
+                    hint: 'Мини отель на Севастопольском проспекте'
+                }
+            ];
+
+            var clusterer = new ymaps.Clusterer({
+                clusterIconLayout: 'default#image',
+                clusterIconImageHref: 'images/Loggo2.png',
+                clusterIconImageSize: [50, 50],
+                clusterIconImageOffset: [-25, -25],
+                clusterDisableClickZoom: true,
+                clusterHideIconOnBalloonOpen: false,
+                geoObjectHideIconOnBalloonOpen: false
+            });
+
+            hostels.forEach(function(hotel) {
+                var placemark = new ymaps.Placemark(
+                    hotel.coords,
+                    {
+                        hintContent: hotel.hint,
+                        balloonContent: hotel.address
+                    },
+                    {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'images/Loggo2.png',
+                        iconImageSize: [40, 40],
+                        iconImageOffset: [-20, -20]
+                    }
+                );
+                clusterer.add(placemark);
+            });
+
+            map.geoObjects.add(clusterer);
+            
+            if (hostels.length > 0) {
+                map.setBounds(clusterer.getBounds(), {
+                    checkZoomRange: true
+                });
+            }
+        }
+    </script>
+</body>
+</html>
