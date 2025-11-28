@@ -9,12 +9,12 @@ function initRoomGallery() {
     
     let currentIndex = 0;
     const images = [
-        'images/junior-suite/1.JPG',
-        'images/junior-suite/2.JPG',
-        'images/junior-suite/3.JPG',
-        'images/junior-suite/4.JPG',
-        'images/junior-suite/5.JPG',
-        'images/junior-suite/6.JPG'
+        'images/hotel1/1.JPG',
+        'images/hotel1/2.JPG',
+        'images/hotel1/3.JPG',
+        'images/hotel1/4.JPG',
+        'images/hotel1/5.JPG',
+        'images/hotel1/6.JPG'
     ];
     
     // Установка общего количества слайдов

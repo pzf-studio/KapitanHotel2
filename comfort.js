@@ -9,12 +9,12 @@ function initRoomGallery() {
     
     let currentIndex = 0;
     const images = [
-        'images/comfort1/1.JPG',
-        'images/comfort1/2.JPG',
-        'images/comfort1/3.JPG',
-        'images/comfort1/4.JPG',
-        'images/comfort1/5.JPG',
-        'images/comfort1/6.JPG'
+        'images/hotel1/1.JPG',
+        'images/hotel1/2.JPG',
+        'images/hotel1/3.JPG',
+        'images/hotel1/4.JPG',
+        'images/hotel1/5.JPG',
+        'images/hotel1/6.JPG'
     ];
     
     // Установка общего количества слайдов
