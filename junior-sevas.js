@@ -11,12 +11,12 @@ function initRoomGallery() {
     
     let currentIndex = 0;
     const images = [
-        'images/sevas/luxe/photo_1_2025-11-30_17-33-55.jpg',
-        'images/sevas/luxe/photo_2025-11-30_17-33-15.jpg',
-        'images/sevas/luxe/photo_2025-11-30_17-33-17.jpg',
-        'images/sevas/luxe/photo_2025-11-30_17-33-18.jpg',
-        'images/sevas/luxe/photo_2025-11-30_17-33-19.jpg',
-        'images/sevas/luxe/photo_2025-11-30_17-33-20.jpg'
+        'images/sevas/halfl/photo_1_2025-11-30_17-36-59.jpg',
+        'images/sevas/halfl/photo_2_2025-11-30_17-36-59.jpg',
+        'images/sevas/halfl/photo_3_2025-11-30_17-36-59.jpg',
+        'images/sevas/halfl/photo_4_2025-11-30_17-36-59.jpg',
+        'images/sevas/halfl/photo_5_2025-11-30_17-36-59.jpg',
+        'images/sevas/halfl/photo_6_2025-11-30_17-36-59.jpg'
     ];
     
     totalSlidesEl.textContent = images.length;

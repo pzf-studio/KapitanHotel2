@@ -1,4 +1,3 @@
-// Инициализация галереи номера
 function initRoomGallery() {
     const mainSlide = document.querySelector('.gallery-main .main-slide');
     const thumbnails = document.querySelectorAll('.gallery-thumbnails .thumbnail');
@@ -7,47 +6,45 @@ function initRoomGallery() {
     const currentSlideEl = document.querySelector('.current-slide');
     const totalSlidesEl = document.querySelector('.total-slides');
     
+    const galleryMain = document.querySelector('.gallery-main');
+    const galleryThumbnails = document.querySelector('.gallery-thumbnails');
+    
     let currentIndex = 0;
     const images = [
-        'images/hotel1/1.JPG',
-        'images/hotel1/2.JPG',
-        'images/hotel1/3.JPG',
-        'images/hotel1/4.JPG',
-        'images/hotel1/5.JPG',
-        'images/hotel1/6.JPG'
+        'images/sevas/standart/photo_1_2025-11-30_17-36-22.jpg',
+        'images/sevas/standart/photo_2_2025-11-30_17-36-22.jpg',
+        'images/sevas/standart/photo_3_2025-11-30_17-36-22.jpg',
+        'images/sevas/standart/photo_4_2025-11-30_17-36-22.jpg',
+        'images/sevas/standart/photo_5_2025-11-30_17-36-22.jpg'
     ];
     
-    // Установка общего количества слайдов
     totalSlidesEl.textContent = images.length;
     
-    // Обновление главного слайда
+    galleryMain.classList.add('vertical');
+    galleryThumbnails.classList.add('vertical');
+    
     function updateMainSlide(index) {
         mainSlide.style.backgroundImage = `url('${images[index]}')`;
         currentSlideEl.textContent = index + 1;
         
-        // Обновление активной миниатюры
         thumbnails.forEach((thumb, i) => {
             thumb.classList.toggle('active', i === index);
         });
     }
     
-    // Переход к следующему слайду
     function nextSlide() {
         currentIndex = (currentIndex + 1) % images.length;
         updateMainSlide(currentIndex);
     }
     
-    // Переход к предыдущему слайду
     function prevSlide() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         updateMainSlide(currentIndex);
     }
     
-    // Обработчики для кнопок навигации
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
     
-    // Обработчики для миниатюр
     thumbnails.forEach((thumb, index) => {
         thumb.addEventListener('click', () => {
             currentIndex = index;
@@ -55,10 +52,8 @@ function initRoomGallery() {
         });
     });
     
-    // Автопрокрутка галереи
     let slideInterval = setInterval(nextSlide, 5000);
     
-    // Остановка автопрокрутки при наведении
     const galleryArea = document.querySelector('.room-gallery');
     galleryArea.addEventListener('mouseenter', () => {
         clearInterval(slideInterval);
@@ -68,11 +63,9 @@ function initRoomGallery() {
         slideInterval = setInterval(nextSlide, 5000);
     });
     
-    // Инициализация первого слайда
     updateMainSlide(0);
 }
 
-// Инициализация формы бронирования
 function initBookingForm() {
     const form = document.querySelector('.mini-booking-form');
     
@@ -88,13 +81,10 @@ function initBookingForm() {
             return;
         }
         
-        // Здесь должна быть логика проверки доступности
-        // В данном примере просто перенаправляем на страницу бронирования
         window.location.href = 'index.html#booking';
     });
 }
 
-// Инициализация мобильного меню
 function initMobileMenu() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.nav');
@@ -106,22 +96,22 @@ function initMobileMenu() {
     }
 }
 
-// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     initRoomGallery();
     initBookingForm();
     initMobileMenu();
     
-    // Анимация появления элементов
-    gsap.utils.toArray('.room-hero, .room-description, .similar-rooms').forEach(section => {
-        gsap.from(section, {
-            scrollTrigger: {
-                trigger: section,
-                start: 'top 80%'
-            },
-            opacity: 0,
-            y: 50,
-            duration: 0.8
+    if (typeof gsap !== 'undefined') {
+        gsap.utils.toArray('.room-hero, .room-description, .similar-rooms').forEach(section => {
+            gsap.from(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%'
+                },
+                opacity: 0,
+                y: 50,
+                duration: 0.8
+            });
         });
-    });
+    }
 });
